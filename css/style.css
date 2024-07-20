@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'ChosunGs';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --pink: #eb1784;
+    --rabelais-gold: #b47541; /*C30 M55 Y80 K0*/ /*pantone 874U*/
+    --rabelais-orange: #f1511b; /*C0 M75 Y100 K0*/ /*pantone orange 021U*/
+    --rabelais-blue: #1e5cb3; /*C100 M65 Y0 K0*/ /*pantone 300U*/
+}
+
+body {
+    font-family: 'ChosunGs';
+    margin: 0;
+}
+
+#title-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+ol, ul {
+  box-sizing: border-box;
+}
+
+#singers-wrapper {
+    margin: 0 auto;
+    height: 20vh;
+}
+
+#singers-wrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#singers-wrapper ul li {
+    padding: 20px;
+    height: 100%;
+    text-align: center;
+}
+
+#singers-wrapper ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--pink);
+}
+
+#singers-wrapper ul li a:hover {
+    color: var(--rabelais-gold);
+}
