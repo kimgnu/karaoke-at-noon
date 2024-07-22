@@ -5,37 +5,43 @@ const singers = [
 	"name": "<",
 	"title": "서점극장 라블레",
 	"singer": "축가",
-	"link": "https://www.youtube.com/watch?v=MmJijjywRt4",
+	"link": "https://www.youtube.com/watch?v=KQUGe-LYXsw",
     },
     {
-	"name": "흑장미",
-	"title": "내게 남은 사랑을 드릴께요",
-	"singer": "장혜리",
-	"link": "https://www.youtube.com/watch?v=VRuUZcbOqEo",
+	"name": "황새맘",
+	"title": "Журавли (백학)",
+	"singer": "Марк Бернес",
+	"link": "https://www.youtube.com/watch?v=c0tezPntRzA",
     },
     {
-	"name": "무궁화",
-	"title": "Ich war noch niemals in New York",
-	"singer": "Udo Jürgens",
-	"link": "https://www.youtube.com/watch?v=9N9iHUrMlw8",
+	"name": "나이팅게일",
+	"title": "I love you",
+	"singer": "포지션",
+	"link": "https://www.youtube.com/watch?v=0sULDwCwzys",
     },
     {
-	"name": "진달래",
-	"title": "That old feeling",
-	"singer": "",
-	"link": "https://www.youtube.com/watch?v=kM1KIu1RmfU"
+	"name": "아수라",
+	"title": "환희",
+	"singer": "정수라",
+	"link": "https://www.youtube.com/watch?v=APQb_7qu_jU"
     },
     {
-	"name": "민들레",
-	"title": "내 생에 봄날은",
-	"singer": "캔",
-	"link": "https://www.youtube.com/watch?v=f71Em8Jr1BE"
+	"name": "종달새",
+	"title": "Attention",
+	"singer": "NewJeans",
+	"link": "https://www.youtube.com/watch?v=Hx071fT9W7k"
+    },
+    {
+	"name": "꾀꼬리",
+	"title": "찬찬찬",
+	"singer": "편승엽",
+	"link": "https://www.youtube.com/watch?v=LBIj2dB_rhE"
     },
     {
 	"name": ">",
 	"title": "서점극장 라블레",
 	"singer": "축가",
-	"link": "https://www.youtube.com/watch?v=4mAHTdxct-c",
+	"link": "https://www.youtube.com/watch?v=W52LhDXGTkE",
     }
 ];
 

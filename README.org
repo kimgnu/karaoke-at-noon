@@ -3,6 +3,6 @@
 ** 실행
 ~src~ 디렉토리 내의 소스 파일을 웹 서버로 구동한다. ~python3~​의 ~http.server~ 모듈을 쓸 경우 다음과 같이 실행하면 된다.
 #+BEGIN_SRC bash
-  $ cd src
-  $ python -m http.server
+  cd src
+  python -m http.server
 #+END_SRC
