@@ -64,3 +64,12 @@ ol, ul {
 #singers-wrapper ul li a:hover {
     color: var(--rabelais-gold);
 }
+
+#audio-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+audio {
+    width: 100%;
+}

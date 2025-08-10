@@ -45,6 +45,15 @@ const singers = [
     }
 ];
 
+function getAudioPageLink(name) {
+    let singer = singers.filter(s => s.name === name);
+    if (singer && Array.isArray(singer) && singer.length) {
+	singer = singer[0];
+	return `/play-audio/?title=${singer.title}%20${singer.singer}&audio=${singer.audio}`;
+    }
+    return null;
+}
+
 function renderTitle(title) {
     if (title === null || title === undefined) {
 	title = titleText;
@@ -58,7 +67,7 @@ function renderSingers() {
     singers.forEach(function(singer) {
 	let li = document.createElement("li");
 	let a = document.createElement("a");
-	a.href = singer.link;
+	a.href = singer.audio ? getAudioPageLink(singer.name) : singer.link;
 	a.innerHTML = `${singer.name}`;
 	a.addEventListener('mouseover', function(event) {
 	    let singer = singers.filter(s => s.name === event.target.innerHTML);
