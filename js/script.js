@@ -3,47 +3,74 @@ const titleText = ["라블레배", "정오의 가라오케", "스낵 카츠코"]
 const singers = [
     {
 	"name": "<",
-	"title": "서점극장 라블레",
+	"title": "심사위원 축가",
+	"singer": "Elena",
+	"audio": "/media/Elena Music_Karaoke(No adlib).mp3"
+    },
+    {
+	"name": "<",
+	"title": "2대 가왕",
 	"singer": "축가",
-	"link": "https://www.youtube.com/watch?v=KQUGe-LYXsw",
+	"link": "https://www.youtube.com/watch?v=f71Em8Jr1BE"
     },
     {
-	"name": "황새맘",
-	"title": "Журавли (백학)",
-	"singer": "Марк Бернес",
-	"link": "https://www.youtube.com/watch?v=c0tezPntRzA",
+	"name": "헤르만 헤세",
+	"title": "와",
+	"singer": "이정현",
+	"link": "https://www.youtube.com/watch?v=HfhzhonToJU",
     },
     {
-	"name": "나이팅게일",
-	"title": "I love you",
-	"singer": "포지션",
-	"link": "https://www.youtube.com/watch?v=0sULDwCwzys",
+	"name": "알베르 카뮈",
+	"title": "24시간이 모자라",
+	"singer": "선미",
+	"link": "https://www.youtube.com/watch?v=xNZ17TdDM0A"
     },
     {
-	"name": "아수라",
-	"title": "환희",
-	"singer": "정수라",
-	"link": "https://www.youtube.com/watch?v=APQb_7qu_jU"
+	"name": "안나 새가쵸바",
+	"title": "Миллион алых роз",
+	"singer": "Алла Пугачёва",
+	"link": "https://www.youtube.com/watch?v=uAFHXvtmhTo"
     },
     {
-	"name": "종달새",
-	"title": "Attention",
-	"singer": "NewJeans",
-	"link": "https://www.youtube.com/watch?v=Hx071fT9W7k"
+	"name": "구묘진",
+	"title": "我站在全世界的屋頂",
+	"singer": "張艾嘉",
+	"audio": "/media/我站在全世界的屋頂 - 張艾嘉.mp3"
     },
     {
-	"name": "꾀꼬리",
-	"title": "찬찬찬",
-	"singer": "편승엽",
-	"link": "https://www.youtube.com/watch?v=LBIj2dB_rhE"
+	"name": "호세 마르티",
+	"title": "Silencio",
+	"singer": "Ibrahim Ferrer & Omara Portuondo",
+	"link": "https://www.youtube.com/watch?v=yGkpgenAnYE"
+    },
+    {
+	"name": "생텍쥐베리",
+	"title": "안되겠더라",
+	"singer": "4MEN",
+	"link": "https://www.youtube.com/watch?v=XYc83Uw1fq0"
     },
     {
 	"name": ">",
 	"title": "서점극장 라블레",
 	"singer": "축가",
-	"link": "https://www.youtube.com/watch?v=W52LhDXGTkE",
+	"link": "https://www.youtube.com/watch?v=DzzRLP6aPxA"
+    },
+    {
+	"name": ">",
+	"title": "심사위원",
+	"singer": "축가",
+	"link": "https://youtube.com/watch?v=Q-1EjXY7Cog"
     }
 ];
+
+function getAudioPageLink(name) {
+    let singer = singers.filter(s => s.name === name);
+    if (singer && Array.isArray(singer) && singer.length) {
+	singer = singer[0];
+	return `/play-audio/?title=${singer.title}%20${singer.singer}&audio=${singer.audio}`;
+    }
+    return null;
+}
 
 function renderTitle(title) {
     if (title === null || title === undefined) {
@@ -58,7 +85,7 @@ function renderSingers() {
     singers.forEach(function(singer) {
 	let li = document.createElement("li");
 	let a = document.createElement("a");
-	a.href = singer.link;
+	a.href = singer.audio ? getAudioPageLink(singer.name) : singer.link;
 	a.innerHTML = `${singer.name}`;
 	a.addEventListener('mouseover', function(event) {
 	    let singer = singers.filter(s => s.name === event.target.innerHTML);

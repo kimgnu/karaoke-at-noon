@@ -58,9 +58,18 @@ ol, ul {
 #singers-wrapper ul li a {
     text-decoration: none;
     font-size: 2rem;
-    color: var(--pink);
+    color: var(--rabelais-blue);
 }
 
 #singers-wrapper ul li a:hover {
-    color: var(--rabelais-gold);
+    color: var(--rabelais-orange);
+}
+
+#audio-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+audio {
+    width: 100%;
 }
